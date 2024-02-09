@@ -4,9 +4,8 @@
     "version": "0.0.0",
     "type": "module",
     "files": ["dist"],
-    "main": "./dist/kylib.umd.cjs",
-    "types": "./dist/main.d.ts",
-    "module": "./dist/kylib.js",
+    "main": "dist/kylib.js",
+    "types": "dist/main.d.ts",
     "exports": {
         ".": {
             "import": "./dist/kylib.js",
