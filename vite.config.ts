@@ -8,7 +8,7 @@ export default defineConfig({
         copyPublicDir: false,
         lib: {
             // Could also be a dictionary or array of multiple entry points
-            entry: path.resolve(__dirname, "src", "index.ts"),
+            entry: path.resolve(__dirname, "src/index.ts"),
             name: "kylib",
             // the proper extensions will be added
             fileName: "ky-lib",
@@ -26,5 +26,5 @@ export default defineConfig({
             },
         },
     },
-    plugins: [dts({entryPoints: ["src/index.ts"]})],
+    plugins: [dts({include: ["src/index.ts"]})],
 });
