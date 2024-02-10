@@ -3,14 +3,8 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "main": "dist/kylib.js",
+    "main": "dist/ky-lib-js",
     "types": "dist/index.d.ts",
-    "exports": {
-        ".": {
-            "import": "./dist/kylib.js",
-            "require": "./dist/kylib.umd.cjs"
-        }
-    },
     "files": [
         "dist"
     ],
