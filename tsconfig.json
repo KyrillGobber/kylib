@@ -6,6 +6,9 @@
         "module": "ESNext",
         "skipLibCheck": true,
         "baseUrl": ".",
+        "outDir": "dist",
+        "declaration": true,
+        "declarationMap": true,
         "paths": {
             "@/*": ["./src/*"]
         },
