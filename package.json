@@ -4,7 +4,7 @@
     "version": "0.0.0",
     "type": "module",
     "main": "dist/kylib.js",
-    "types": "dist/kylib.d.ts",
+    "types": "dist/index.d.ts",
     "exports": {
         ".": {
             "import": "./dist/kylib.js",

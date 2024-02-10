@@ -26,5 +26,5 @@ export default defineConfig({
             },
         },
     },
-    plugins: [dts()],
+    plugins: [dts({entryPoints: ["src/index.ts"]})],
 });
