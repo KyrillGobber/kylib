@@ -3,7 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "main": "dist/ky-lib-js",
+    "main": "dist/ky-lib.js",
     "types": "dist/index.d.ts",
     "files": [
         "dist"
