@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
-import path from 'path'
-import dts from 'vite-plugin-dts'
+import path from "path";
+import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -26,5 +26,10 @@ export default defineConfig({
             },
         },
     },
-    plugins: [dts({include: ["src/index.ts"]})],
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "./src"),
+        },
+    },
+    plugins: [dts({ include: ["src/index.ts"] })],
 });
