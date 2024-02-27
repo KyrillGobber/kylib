@@ -1,4 +1,4 @@
-import './index.css'
+import './dist/tailwind.css';
 
 export function helloAnything(thing: string): string {
   return `Hello ${thing}!`
