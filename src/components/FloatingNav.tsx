@@ -20,6 +20,7 @@ export type NavigationLink = {
 export type FloatingNavProps = {
     children?: React.ReactNode;
     navigationLinks?: NavigationLink[];
+    mobileAddition?: JSX.Element;
 };
 
 export const FloatingNav = ({
@@ -28,12 +29,25 @@ export const FloatingNav = ({
 }: FloatingNavProps) => {
     const { isMobile } = useIsMobile();
 
+    const getNavElements = () => {
+        if (children) return children;
+        if (navigationLinks) {
+            return (
+                // TODO
+            );
+        }
+    };
+
+    if (!children && !navigationLinks) {
+        return null;
+    }
+
     if (isMobile) {
         return <MobileDrawerNav children={children} />;
     } else {
         return (
             <div className="flex flex-col gap-2 fixed sm:bottom-10 right-8 z-90 cursor-pointer">
-                {children}
+                {getNavElements()}
             </div>
         );
     }
@@ -41,9 +55,9 @@ export const FloatingNav = ({
 
 const MobileDrawerNav = ({
     children,
-}: {
-    children: React.ReactNode;
-}) => {
+    navigationLinks,
+    mobileAddition
+}: FloatingNavProps) => {
     const [isDrawerOpen, setDrawerOpen] = useState(false);
 
     return (
@@ -51,7 +65,7 @@ const MobileDrawerNav = ({
             <DrawerTrigger
                 onClick={() => setDrawerOpen(true)}
                 className={cn(
-                    "w-screen sticky h-16 z-50 bottom-0 shd:hidden flex flex-row justify-center items-center"
+                    "bg-secondary w-screen sticky h-16 z-50 bottom-0 shd:hidden flex flex-row justify-center items-center"
                 )}
             >
                 <Menu className="scale-150 self-center" color="white" />
