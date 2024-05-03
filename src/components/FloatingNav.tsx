@@ -52,7 +52,7 @@ const MobileDrawerNav = ({
             <DrawerTrigger
                 onClick={() => setDrawerOpen(true)}
                 className={cn(
-                    "bg-secondary w-screen sticky h-16 z-50 bottom-0 shd:hidden flex flex-row justify-center items-center",
+                    "bg-secondary w-screen sticky h-16 z-50 bottom-0 flex flex-row justify-center items-center",
                 )}
             >
                 <Menu className="scale-150 self-center" color="white" />
