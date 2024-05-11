@@ -1,4 +1,3 @@
-import { AppContainer } from "@/components/AppContainer";
 import { FloatingNav } from "@/components/FloatingNav";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -52,7 +51,7 @@ const floatingNavMobileChildren = [
 
 const mobileAddition = <div>stuff</div>;
 
-export const Primary: Story = {
+export const PrimaryWithMobile: Story = {
     render: () => (
         <FloatingNav
             children={floatingNavChildren}
