@@ -1,7 +1,8 @@
-import { FloatingNav } from "@/components/FloatingNav";
+import { FloatingNav, FloatingNavPosition } from "@/components/FloatingNav";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Contact, GalleryThumbnails, Home, Image } from "lucide-react";
 
 const meta: Meta<typeof FloatingNav> = {
     component: FloatingNav,
@@ -34,6 +35,18 @@ const floatingNavChildren = [
     </a>,
 ];
 
+const floatingNavChildrenIcons = [
+    <a className={cn(buttonVariants({ variant: "secondary" }))} href="#">
+        <Home />
+    </a>,
+    <a className={cn(buttonVariants({ variant: "secondary" }))} href="#">
+        <Image />
+    </a>,
+    <a className={cn(buttonVariants({ variant: "secondary" }))} href="#">
+        <Contact />
+    </a>,
+];
+
 const floatingNavMobileChildren = [
     <a className={cn(buttonVariants({ variant: "ghost" }))} href="#">
         Home
@@ -57,6 +70,39 @@ export const PrimaryWithMobile: Story = {
             children={floatingNavChildren}
             mobileChildren={floatingNavMobileChildren}
             mobileAddition={mobileAddition}
+        />
+    ),
+};
+
+export const PrimaryWithMobileTop: Story = {
+    render: () => (
+        <FloatingNav
+            children={floatingNavChildren}
+            mobileChildren={floatingNavMobileChildren}
+            mobileAddition={mobileAddition}
+            position={"top"}
+        />
+    ),
+};
+
+export const PrimaryWithMobileCenter: Story = {
+    render: () => (
+        <FloatingNav
+            children={floatingNavChildren}
+            mobileChildren={floatingNavMobileChildren}
+            mobileAddition={mobileAddition}
+            position={"center"}
+        />
+    ),
+};
+
+export const PrimaryWithMobileCenterIcons: Story = {
+    render: () => (
+        <FloatingNav
+            children={floatingNavChildrenIcons}
+            mobileChildren={floatingNavMobileChildren}
+            mobileAddition={mobileAddition}
+            position={"center"}
         />
     ),
 };
