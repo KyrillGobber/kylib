@@ -31,5 +31,5 @@ export default defineConfig({
             "@": path.resolve(__dirname, "./src"),
         },
     },
-    plugins: [dts({ include: ["src/index.ts"] })],
+    plugins: [dts({ include: ["src/index.ts", 'src/**/*.ts', 'src/**/*.tsx'] })],
 });
