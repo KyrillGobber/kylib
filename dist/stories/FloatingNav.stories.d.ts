@@ -8,4 +8,5 @@ export declare const PrimaryWithMobile: Story;
 export declare const PrimaryWithMobileTop: Story;
 export declare const PrimaryWithMobileCenter: Story;
 export declare const PrimaryWithMobileCenterIcons: Story;
+export declare const PrimaryWithMobileCenterIconsLeft: Story;
 //# sourceMappingURL=FloatingNav.stories.d.ts.map

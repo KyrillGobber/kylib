@@ -25725,10 +25725,11 @@ const P3 = ({
   children: u,
   mobileChildren: d,
   mobileAddition: f,
-  position: y = "bottom"
-  /* BOTTOM */
+  position: y = "bottom",
+  side: S = "right"
+  /* RIGHT */
 }) => {
-  const { isMobile: S } = BO(), b = () => {
+  const { isMobile: b } = BO(), h = () => {
     switch (y) {
       case "top":
         return "top-10";
@@ -25737,14 +25738,21 @@ const P3 = ({
       case "bottom":
         return "bottom-10 ";
     }
+  }, x = () => {
+    switch (S) {
+      case "left":
+        return "left-8";
+      case "right":
+        return "right-8";
+    }
   };
-  return S && d ? /* @__PURE__ */ pe.jsx(
+  return b && d ? /* @__PURE__ */ pe.jsx(
     P3,
     {
       mobileChildren: d,
       mobileAddition: f
     }
-  ) : !S && u ? /* @__PURE__ */ pe.jsx("div", { className: Fn("flex flex-col gap-2 fixed right-8 z-90 cursor-pointer", b()), children: u }) : null;
+  ) : !b && u ? /* @__PURE__ */ pe.jsx("div", { className: Fn("flex flex-col gap-2 fixed z-90 cursor-pointer", h(), x()), children: u }) : null;
 }, AA = ({ children: u }) => /* @__PURE__ */ pe.jsx("div", { className: Fn("relative h-full font-sans antialiased"), children: /* @__PURE__ */ pe.jsx("main", { className: "relative flex flex-col min-h-screen gap-8", children: u }) }), $A = ({ children: u, addClasses: d }) => /* @__PURE__ */ pe.jsx("div", { className: "flex flex-col justify-start items-center gap-20", children: /* @__PURE__ */ pe.jsx("div", { className: Fn("flex w-10/12 sm:w-2/3 flex-col items-center gap-8 mt-12 md:mt-32 text-center", d), children: u }) });
 function F3(u) {
   return Object.prototype.toString.call(u) === "[object Object]";
