@@ -106,3 +106,15 @@ export const PrimaryWithMobileCenterIcons: Story = {
         />
     ),
 };
+
+export const PrimaryWithMobileCenterIconsLeft: Story = {
+    render: () => (
+        <FloatingNav
+            children={floatingNavChildrenIcons}
+            mobileChildren={floatingNavMobileChildren}
+            mobileAddition={mobileAddition}
+            position={'center'}
+            side={'left'}
+        />
+    ),
+};

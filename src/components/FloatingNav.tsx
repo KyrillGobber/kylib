@@ -8,11 +8,17 @@ enum FloatingNavPosition {
     BOTTOM = "bottom",
 }
 
+enum FloatingNavSide {
+    LEFT = "left",
+    RIGHT = "right",
+}
+
 export type FloatingNavProps = {
     children?: JSX.Element[];
     mobileChildren?: JSX.Element[];
     mobileAddition?: JSX.Element;
     position?: "top" | "center" | "bottom";
+    side?: "left" | "right";
 };
 
 export const FloatingNav = ({
@@ -20,6 +26,7 @@ export const FloatingNav = ({
     mobileChildren,
     mobileAddition,
     position = FloatingNavPosition.BOTTOM,
+    side = FloatingNavSide.RIGHT,
 }: FloatingNavProps) => {
     const { isMobile } = useIsMobile();
 
@@ -34,6 +41,15 @@ export const FloatingNav = ({
         }
     };
 
+    const getSide = () => {
+        switch (side) {
+            case FloatingNavSide.LEFT:
+                return "left-8";
+            case FloatingNavSide.RIGHT:
+                return "right-8";
+        }
+    };
+
     if (isMobile && mobileChildren) {
         return (
             <MobileDrawerNav
@@ -43,7 +59,7 @@ export const FloatingNav = ({
         );
     } else if (!isMobile && children) {
         return (
-            <div className={cn("flex flex-col gap-2 fixed right-8 z-90 cursor-pointer", getPosition())}>
+            <div className={cn("flex flex-col gap-2 fixed z-90 cursor-pointer", getPosition(), getSide())}>
                 {children}
             </div>
         );
