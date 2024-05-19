@@ -1,24 +1,24 @@
-import { useIsMobile } from "@/lib/hooks/useIsMobile";
-import { MobileDrawerNav } from "./MobileDrawerNav";
-import { cn } from "@/lib/utils";
+import { useIsMobile } from '@/lib/hooks/useIsMobile';
+import { MobileDrawerNav } from './MobileDrawerNav';
+import { cn, positionClasses, sideClasses } from '@/lib/utils';
 
 enum FloatingNavPosition {
-    TOP = "top",
-    CENTER = "center",
-    BOTTOM = "bottom",
+    TOP = 'top',
+    CENTER = 'center',
+    BOTTOM = 'bottom',
 }
 
 enum FloatingNavSide {
-    LEFT = "left",
-    RIGHT = "right",
+    LEFT = 'left',
+    RIGHT = 'right',
 }
 
 export type FloatingNavProps = {
     children?: JSX.Element[];
     mobileChildren?: JSX.Element[];
     mobileAddition?: JSX.Element;
-    position?: "top" | "center" | "bottom";
-    side?: "left" | "right";
+    position?: 'top' | 'center' | 'bottom';
+    side?: 'left' | 'right';
 };
 
 export const FloatingNav = ({
@@ -29,26 +29,8 @@ export const FloatingNav = ({
     side = FloatingNavSide.RIGHT,
 }: FloatingNavProps) => {
     const { isMobile } = useIsMobile();
-
-    const getPosition = () => {
-        switch (position) {
-            case FloatingNavPosition.TOP:
-                return "top-10";
-            case FloatingNavPosition.CENTER:
-                return "top-1/2 -translate-y-1/2";
-            case FloatingNavPosition.BOTTOM:
-                return "bottom-10 ";
-        }
-    };
-
-    const getSide = () => {
-        switch (side) {
-            case FloatingNavSide.LEFT:
-                return "left-8";
-            case FloatingNavSide.RIGHT:
-                return "right-8";
-        }
-    };
+    const positionClass = positionClasses[position];
+    const sideClass = sideClasses[side];
 
     if (isMobile && mobileChildren) {
         return (
@@ -59,10 +41,15 @@ export const FloatingNav = ({
         );
     } else if (!isMobile && children) {
         return (
-            <div className={cn("flex flex-col gap-2 fixed z-90 cursor-pointer", getPosition(), getSide())}>
+            <div
+                className={cn(
+                    'flex flex-col gap-2 fixed z-90 cursor-pointer',
+                    positionClass,
+                    sideClass
+                )}
+            >
                 {children}
             </div>
         );
     } else return null;
 };
-
