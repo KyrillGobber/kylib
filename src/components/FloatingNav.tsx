@@ -2,17 +2,6 @@ import { useIsMobile } from '@/lib/hooks/useIsMobile';
 import { MobileDrawerNav } from './MobileDrawerNav';
 import { cn, positionClasses, sideClasses } from '@/lib/utils';
 
-enum FloatingNavPosition {
-    TOP = 'top',
-    CENTER = 'center',
-    BOTTOM = 'bottom',
-}
-
-enum FloatingNavSide {
-    LEFT = 'left',
-    RIGHT = 'right',
-}
-
 export type FloatingNavProps = {
     children?: JSX.Element[];
     mobileChildren?: JSX.Element[];
@@ -25,8 +14,8 @@ export const FloatingNav = ({
     children,
     mobileChildren,
     mobileAddition,
-    position = FloatingNavPosition.BOTTOM,
-    side = FloatingNavSide.RIGHT,
+    position = "bottom",
+    side = "right",
 }: FloatingNavProps) => {
     const { isMobile } = useIsMobile();
     const positionClass = positionClasses[position];
