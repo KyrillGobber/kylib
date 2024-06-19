@@ -7,22 +7,27 @@ type FooterSocials = {
     additionalSocials?: JSX.Element[];
 };
 
+type FooterSourceProps = {
+    sourceText: string;
+    link: string;
+};
+
 type KyFooterProps = {
     footerText?: string;
     footerSocials?: FooterSocials;
-    footerSourceText?: string;
+    footerSource?: FooterSourceProps;
 };
 
 export const KyFooter = ({
     footerText,
     footerSocials,
-    footerSourceText,
+    footerSource,
 }: KyFooterProps) => {
     return (
         <footer className="mt-auto mb-6 flex flex-col justify-center items-center bottom-0 gap-4">
             <FooterText text={footerText} />
             <FooterSocials {...footerSocials} />
-            <FooterSrc sourceText={footerSourceText} />
+            {footerSource && <FooterSrc {...footerSource} />}
         </footer>
     );
 };
@@ -72,13 +77,12 @@ const FooterSocials = ({
     );
 };
 
-const FooterSrc = ({ sourceText }: { sourceText?: string }) => {
-    if (!sourceText) return null;
+const FooterSrc = ({ sourceText, link }: FooterSourceProps) => {
     return (
         <a
             className="flex flex-row gap-2 text-sm md:text-base"
             target="_blank"
-            href={"https://github.com/KyrillGobber/kyFrontpage"}
+            href={link}
             rel="noopener noreferrer"
         >
             {sourceText}
