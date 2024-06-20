@@ -17,7 +17,7 @@ export const AppContainer = ({
             )}
         >
             <main className={cn(
-                "relative flex flex-col min-h-screen gap-8",
+                "relative flex flex-col min-h-screen w-screen gap-8",
                 addMainClasses
             )}>
                 {children}
