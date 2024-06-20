@@ -14,5 +14,5 @@ type Story = StoryObj<typeof KyFooter>;
  * to learn how to use render functions.
  */
 export const Default: Story = {
-  render: () => <KyFooter footerText="gaggfurz" footerSourceText="Source code on GitHub"/>,
+  render: () => <KyFooter footerText="gaggfurz"/>,
 };
