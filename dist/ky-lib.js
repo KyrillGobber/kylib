@@ -27193,6 +27193,7 @@ export {
   MA as KyFooter,
   zA as KyNav,
   X2 as ModeToggle,
+  Bw as TextGradients,
   $A as ThemeProvider,
   LA as getRandomTextGradient,
   OA as useInterval,
