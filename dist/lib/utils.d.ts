@@ -17,6 +17,6 @@ export declare enum TextGradients {
     Teal = "bg-gradient-to-r from-teal-300 via-teal-500 to-teal-700 bg-clip-text text-transparent",
     Lime = "bg-gradient-to-r from-lime-300 via-lime-500 to-lime-700 bg-clip-text text-transparent"
 }
-export declare function getRandomTextGradient(): TextGradients;
+export declare const getRandomTextGradient: () => TextGradients;
 export declare function getRandomEnumValue<T>(anEnum: T): T[keyof T];
 //# sourceMappingURL=utils.d.ts.map

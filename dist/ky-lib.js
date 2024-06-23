@@ -3233,9 +3233,7 @@ const VM = {
   // Add other sides as needed
 };
 var Bw = /* @__PURE__ */ ((u) => (u.Red = "bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 bg-clip-text text-transparent", u.Green = "bg-gradient-to-r from-green-300 via-green-500 to-green-700 bg-clip-text text-transparent", u.Blue = "bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent", u.Purple = "bg-gradient-to-r from-purple-300 via-purple-500 to-purple-700 bg-clip-text text-transparent", u.Teal = "bg-gradient-to-r from-teal-300 via-teal-500 to-teal-700 bg-clip-text text-transparent", u.Lime = "bg-gradient-to-r from-lime-300 via-lime-500 to-lime-700 bg-clip-text text-transparent", u))(Bw || {});
-function LA() {
-  return BM(Bw);
-}
+const LA = () => BM(Bw);
 function BM(u) {
   const d = Object.values(u), f = Math.floor(Math.random() * d.length);
   return d[f];
@@ -27195,6 +27193,7 @@ export {
   X2 as ModeToggle,
   Bw as TextGradients,
   $A as ThemeProvider,
+  BM as getRandomEnumValue,
   LA as getRandomTextGradient,
   OA as useInterval,
   YO as useIsMobile

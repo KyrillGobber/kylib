@@ -27,7 +27,7 @@ export enum TextGradients {
     Lime = 'bg-gradient-to-r from-lime-300 via-lime-500 to-lime-700 bg-clip-text text-transparent',
 }
 
-export function getRandomTextGradient(): TextGradients {
+export const getRandomTextGradient = (): TextGradients => {
     return getRandomEnumValue(TextGradients);
 }
 
