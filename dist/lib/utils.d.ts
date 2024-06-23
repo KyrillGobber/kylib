@@ -12,4 +12,5 @@ export declare const sideClasses: {
 };
 export declare const getRandomTextGradient: () => TextGradients;
 export declare function getRandomEnumValue<T>(anEnum: T): T[keyof T];
+export declare function getEnumKeyByValue<T extends object>(enumObj: T, value: T[keyof T]): keyof T | undefined;
 //# sourceMappingURL=utils.d.ts.map

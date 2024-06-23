@@ -21,7 +21,7 @@ export const sideClasses = {
 
 export const getRandomTextGradient = (): TextGradients => {
     return getRandomEnumValue(TextGradients);
-}
+};
 
 export function getRandomEnumValue<T>(anEnum: T): T[keyof T] {
     //@ts-ignore
@@ -29,3 +29,13 @@ export function getRandomEnumValue<T>(anEnum: T): T[keyof T] {
     const randomIndex = Math.floor(Math.random() * enumValues.length);
     return enumValues[randomIndex];
 }
+
+export function getEnumKeyByValue<T extends object>(
+    enumObj: T,
+    value: T[keyof T]
+): keyof T | undefined {
+    return (Object.keys(enumObj) as Array<keyof T>).find(
+        (key) => enumObj[key] === value
+    );
+}
+

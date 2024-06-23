@@ -8,6 +8,6 @@ export { ThemeProvider } from './components/theme-provider';
 export { AppContainer } from './components/AppContainer';
 export { HeroWrapper } from './components/organisms/HeroWrapper';
 export { Carousel, CarouselItem, CarouselPrevious, CarouselNext, CarouselContent } from "./components/ui/carousel";
-export { getRandomTextGradient, getRandomEnumValue } from './lib/utils';
+export { getRandomTextGradient, getRandomEnumValue, getEnumKeyByValue } from './lib/utils';
 export { TextGradients } from './lib/constants';
 //# sourceMappingURL=index.d.ts.map
