@@ -1,10 +1,21 @@
-import { cn } from "@/lib/utils";
-import { Github } from "lucide-react";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "./ui/navigation-menu";
-import { ModeToggle } from "./mode-toggle";
-import { Separator } from "./ui/separator";
+import { cn } from '@/lib/utils';
+import { Github } from 'lucide-react';
+import {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+} from './ui/navigation-menu';
+import { ModeToggle } from './mode-toggle';
+import { Separator } from './ui/separator';
 
-export const KyNav = () => {
+interface KyNavProps {
+    titleElement?: JSX.Element;
+}
+
+export const KyNav = ({ titleElement }: KyNavProps) => {
     return (
         <div className="bg-background sticky z-50 top-0 inset-x-0 h-16">
             <header className="relative">
@@ -38,7 +49,7 @@ export const KyNav = () => {
                                                         className="flex h-1/4 w-full select-none flex-col justify-start rounded-md bg-gradient-to-b from-muted/50 to-muted px-6 py-4 no-underline outline-none focus:shadow-md"
                                                         target="_blank"
                                                         href={
-                                                            "https://github.com/KyrillGobber"
+                                                            'https://github.com/KyrillGobber'
                                                         }
                                                     >
                                                         <span className="flex flex-row gap-2">
@@ -52,24 +63,28 @@ export const KyNav = () => {
                                         <ListItem
                                             href="https://teabruh.gobber.ch"
                                             title="TeaBruh"
-                                            text={'The GongFu timer app, we teaheads needed.'}
+                                            text={
+                                                'The GongFu timer app, we teaheads needed.'
+                                            }
                                         />
                                         <ListItem
                                             href="https://miit.gobber.ch"
                                             title="Miit"
-                                            text={'A free Doodle alternative. Your miitup planner.'}
+                                            text={
+                                                'A free Doodle alternative. Your miitup planner.'
+                                            }
                                         />
                                         <ListItem
                                             href="https://kybits.gobber.ch"
                                             title="KyBits"
-                                            text={"A simple habit tracker app."}
+                                            text={'A simple habit tracker app.'}
                                         />
                                     </ul>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
-                    <h1>Gobber.ch</h1>
+                    {titleElement}
                     <div className="flex flex-row gap-2">
                         <ModeToggle />
                     </div>
@@ -94,7 +109,7 @@ const ListItem = ({ title, href, text }: ListItemProps) => {
                     href={href}
                     target="_blank"
                     className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
                     )}
                 >
                     <div className="text-sm font-medium leading-none">
