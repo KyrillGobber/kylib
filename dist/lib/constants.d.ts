@@ -6,4 +6,8 @@ export declare enum TextGradients {
     Teal = "bg-gradient-to-r from-teal-300 via-teal-500 to-teal-700 bg-clip-text text-transparent",
     Lime = "bg-gradient-to-r from-lime-300 via-lime-500 to-lime-700 bg-clip-text text-transparent"
 }
+export declare const TeabruhURL = "https://teabruh.kyrill.dev";
+export declare const MiitURL = "https://miit.kyrill.ch";
+export declare const GobberURL = "https://www.gobber.ch";
+export declare const KybitsURL = "https://kybits.gobber.ch";
 //# sourceMappingURL=constants.d.ts.map

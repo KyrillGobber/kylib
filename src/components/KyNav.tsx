@@ -10,6 +10,7 @@ import {
 } from './ui/navigation-menu';
 import { ModeToggle } from './mode-toggle';
 import { Separator } from './ui/separator';
+import { KybitsURL, MiitURL, TeabruhURL } from '@/lib/constants';
 
 interface KyNavProps {
     titleElement?: JSX.Element;
@@ -61,21 +62,21 @@ export const KyNav = ({ titleElement }: KyNavProps) => {
                                             </div>
                                         </li>
                                         <ListItem
-                                            href="https://teabruh.gobber.ch"
+                                            href={TeabruhURL}
                                             title="TeaBruh"
                                             text={
                                                 'The GongFu timer app, we teaheads needed.'
                                             }
                                         />
                                         <ListItem
-                                            href="https://miit.gobber.ch"
+                                            href={MiitURL}
                                             title="Miit"
                                             text={
                                                 'A free Doodle alternative. Your miitup planner.'
                                             }
                                         />
                                         <ListItem
-                                            href="https://kybits.gobber.ch"
+                                            href={KybitsURL}
                                             title="KyBits"
                                             text={'A simple habit tracker app.'}
                                         />
