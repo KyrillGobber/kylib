@@ -1,7 +1,7 @@
 import { LoadingDots } from "../atoms/LoadingDots";
 
 type LoadingPageProps = {
-    loader: React.ReactNode;
+    loader?: React.ReactNode;
 };
 
 export const LoadingPage = ({ loader = <LoadingDots /> }: LoadingPageProps) => {
