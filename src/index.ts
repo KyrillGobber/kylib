@@ -13,4 +13,5 @@ export { Carousel, CarouselItem, CarouselPrevious, CarouselNext, CarouselContent
 export { getRandomTextGradient, getRandomEnumValue, getEnumKeyByValue } from "@/lib/utils";
 export { TextGradients } from "@/lib/constants";
 export { LoadingDots } from "@/components/atoms/LoadingDots";
+export { LoadingPage } from "@/components/pages/LoadingPage";
 
