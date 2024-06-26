@@ -1,1 +1,1 @@
-{"version":3,"file":"KyNav.d.ts","sourceRoot":"","sources":["../../src/components/KyNav.tsx"],"names":[],"mappings":"AAMA,eAAO,MAAM,KAAK,+CA0EjB,CAAC"}
+{"version":3,"file":"KyNav.d.ts","sourceRoot":"","sources":["../../src/components/KyNav.tsx"],"names":[],"mappings":";AAaA,UAAU,UAAU;IAChB,YAAY,CAAC,EAAE,GAAG,CAAC,OAAO,CAAC;CAC9B;AAED,eAAO,MAAM,KAAK,qBAAsB,UAAU,4CA8EjD,CAAC"}

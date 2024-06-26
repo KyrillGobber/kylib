@@ -1,6 +1,5 @@
-import { Button } from '@/components/ui/button';
+import { LoadingPage } from '@/components/pages/LoadingPage';
 import type { Meta, StoryObj } from '@storybook/react';
-import { LoadingPage } from '..';
 
 const meta: Meta<typeof LoadingPage> = {
   component: LoadingPage,
