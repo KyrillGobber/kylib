@@ -10,4 +10,5 @@ export { HeroWrapper } from './components/organisms/HeroWrapper';
 export { Carousel, CarouselItem, CarouselPrevious, CarouselNext, CarouselContent } from "./components/ui/carousel";
 export { getRandomTextGradient, getRandomEnumValue, getEnumKeyByValue } from './lib/utils';
 export { TextGradients } from './lib/constants';
+export { LoadingDots } from './components/atoms/LoadingDots';
 //# sourceMappingURL=index.d.ts.map
