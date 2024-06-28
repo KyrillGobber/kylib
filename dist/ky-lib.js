@@ -27191,9 +27191,9 @@ const _A = () => /* @__PURE__ */ oe.jsxs("div", { className: "wrapper", children
   /* @__PURE__ */ oe.jsx("div", { className: "shadow" }),
   /* @__PURE__ */ oe.jsx("div", { className: "shadow" }),
   /* @__PURE__ */ oe.jsx("div", { className: "shadow" })
-] }), WA = ({ loader: u = /* @__PURE__ */ oe.jsx(_A, {}) }) => /* @__PURE__ */ oe.jsxs("div", { className: "absolute inset-0 flex flex-col justify-center items-center", children: [
+] }), WA = ({ loader: u = /* @__PURE__ */ oe.jsx(_A, {}), text: d = "Loading..." }) => /* @__PURE__ */ oe.jsxs("div", { className: "absolute inset-0 flex flex-col justify-center items-center", children: [
   u,
-  /* @__PURE__ */ oe.jsx("p", { children: "Loading..." })
+  /* @__PURE__ */ oe.jsx("p", { children: d })
 ] });
 export {
   BA as AppContainer,
