@@ -17,12 +17,23 @@ export const Default: Story = {
   render: () => <KyNav />,
 };
 
-export const WithTitleElement: Story = {
-  render: () => <KyNav titleElement={<TitleElement />} />,
-};
-
 const TitleElement = () => {
   return (
       <h1>Example Title</h1>
   );
+};
+export const WithTitleElement: Story = {
+  render: () => <KyNav titleElement={<TitleElement />} />,
+};
+
+const additionalElements = () => {
+    return [
+        <p>element 1</p>,
+        <p>element 2</p>,
+        <p>element 3</p>,
+    ];
+}
+
+export const WithAdditionalElements: Story = {
+  render: () => <KyNav titleElement={<TitleElement />} addRightElements={additionalElements()} />,
 };

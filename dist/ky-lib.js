@@ -24145,7 +24145,7 @@ const xT = ET, f1 = ze.forwardRef(
   )
 );
 f1.displayName = xT.displayName;
-const HA = ({ titleElement: u }) => /* @__PURE__ */ oe.jsx("div", { className: "bg-background sticky z-50 top-0 inset-x-0 h-16", children: /* @__PURE__ */ oe.jsxs("header", { className: "relative", children: [
+const HA = ({ titleElement: u, addRightElements: d }) => /* @__PURE__ */ oe.jsx("div", { className: "bg-background sticky z-50 top-0 inset-x-0 h-16", children: /* @__PURE__ */ oe.jsxs("header", { className: "relative", children: [
   /* @__PURE__ */ oe.jsxs("div", { className: "flex flex-row justify-between items-center mx-2 h-16", children: [
     /* @__PURE__ */ oe.jsx(hT, { children: /* @__PURE__ */ oe.jsx(mT, { children: /* @__PURE__ */ oe.jsxs(G2, { children: [
       /* @__PURE__ */ oe.jsx(yT, { className: "bg-secondary dark:bg-secondary p-2 rounded-lg", children: "My Apps" }),
@@ -24203,7 +24203,10 @@ const HA = ({ titleElement: u }) => /* @__PURE__ */ oe.jsx("div", { className: "
       ] }) })
     ] }) }) }),
     u,
-    /* @__PURE__ */ oe.jsx("div", { className: "flex flex-row gap-2", children: /* @__PURE__ */ oe.jsx(J2, {}) })
+    /* @__PURE__ */ oe.jsxs("div", { className: "flex flex-row gap-2", children: [
+      d,
+      /* @__PURE__ */ oe.jsx(J2, {})
+    ] })
   ] }),
   /* @__PURE__ */ oe.jsx(f1, { className: "bg-secondary" })
 ] }) }), _b = ({ title: u, href: d, text: f }) => /* @__PURE__ */ oe.jsx("li", { children: /* @__PURE__ */ oe.jsx(Kb, { asChild: !0, children: /* @__PURE__ */ oe.jsxs(

@@ -1,1 +1,1 @@
-{"version":3,"file":"KyNav.d.ts","sourceRoot":"","sources":["../../src/components/KyNav.tsx"],"names":[],"mappings":";AAcA,UAAU,UAAU;IAChB,YAAY,CAAC,EAAE,GAAG,CAAC,OAAO,CAAC;CAC9B;AAED,eAAO,MAAM,KAAK,qBAAsB,UAAU,4CA8EjD,CAAC"}
+{"version":3,"file":"KyNav.d.ts","sourceRoot":"","sources":["../../src/components/KyNav.tsx"],"names":[],"mappings":";AAcA,UAAU,UAAU;IAChB,YAAY,CAAC,EAAE,GAAG,CAAC,OAAO,CAAC;IAC3B,gBAAgB,CAAC,EAAE,GAAG,CAAC,OAAO,EAAE,CAAC;CACpC;AAED,eAAO,MAAM,KAAK,uCAAwC,UAAU,4CA+EnE,CAAC"}

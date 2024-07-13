@@ -14,9 +14,10 @@ import { KybitsURL, MiitURL, TeabruhURL } from '@/lib/constants';
 
 interface KyNavProps {
     titleElement?: JSX.Element;
+    addRightElements?: JSX.Element[];
 }
 
-export const KyNav = ({ titleElement }: KyNavProps) => {
+export const KyNav = ({ titleElement, addRightElements }: KyNavProps) => {
     return (
         <div className="bg-background sticky z-50 top-0 inset-x-0 h-16">
             <header className="relative">
@@ -87,6 +88,7 @@ export const KyNav = ({ titleElement }: KyNavProps) => {
                     </NavigationMenu>
                     {titleElement}
                     <div className="flex flex-row gap-2">
+                        {addRightElements}
                         <ModeToggle />
                     </div>
                 </div>
