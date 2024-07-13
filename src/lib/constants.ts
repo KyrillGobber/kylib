@@ -8,6 +8,6 @@ export enum TextGradients {
 }
 
 export const TeabruhURL = 'https://teabruh.kyrill.dev';
-export const MiitURL = 'https://miit.kyrill.ch';
+export const MiitURL = 'https://miit.kyrill.dev';
 export const GobberURL = 'https://www.gobber.ch';
 export const KybitsURL = 'https://kybits.gobber.ch';
